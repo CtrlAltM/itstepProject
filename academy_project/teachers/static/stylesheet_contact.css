@@ -1,0 +1,134 @@
+body {
+    font-family: verdana;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:#0067c1;;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#home-page-signup-button {
+    display: block;
+    text-align: center;
+    padding: 40px;
+    font-family: verdana;
+
+}
+
+.inviter {
+    text-align: center;
+    padding-top: 2em;
+}
+
+#home-page-signup-button button {
+    background-color: #2d6be3;
+    color: white;
+    font-size: 1.5em;
+    padding: 15px 35px 15px 35px;
+    border-radius: 40px;
+    border: none;
+}
+
+.ContactPage {
+    text-align: center;
+    padding-top: 0cm;
+    padding-bottom: 1cm;
+}
+
+.contact-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    box-shadow: 10px 10px 10px #015cac;
+    background-color: white;
+}
+
+.fieldWrapper {
+    padding: 10px;
+    margin: auto;
+}
+
+.fieldWrapper label {
+    font-size: 1em;
+}
+
+
+.fieldWrapper input {
+    border-radius: 10px;
+    border: #c3c3c3 solid 0.1px;
+    width: 90%;
+    height: 1cm;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fieldWrapper input:focus {
+    outline: none !important;
+    border: #747474 solid 0.2px;
+}
+
+#message input {
+    height: 4cm;
+}
+
+.contact-form button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-family: verdana;
+    background-color: #2d6be3;
+    color: white;
+    font-size: 1em;
+    width: 40%;
+    height: 1cm;
+    border-radius: 20px;
+    border: none;
+}
+
+#back {
+    background-color: #eaedf6;
+    color: rgb(43, 43, 43);
+}
+
+#back:hover {
+    background-color: #dddfe8;
+}
+
+
+.contact-form p {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.contact-form a {
+    text-decoration: none;
+}
+
+.ContactPage h2 {
+    font-size: 2.5em;
+    padding-top: 2em;
+}
+
+.ContactPage h3 {
+    font-size: 1em;
+    font-weight: light;
+    color:rgb(108, 108, 108)
+}

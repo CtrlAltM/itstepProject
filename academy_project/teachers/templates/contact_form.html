@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+
+    <link rel="stylesheet" href="{% static 'stylesheet_contact.css' %}">
+</head>
+<body>
+
+<div class="contact-form">
+    <div class="ContactPage">
+        <a href="{% url 'profile' %}"><button type="button" id="back">&lt&lt back to profile</button></a>
+        <h2>Trying to contact us?</h1>
+        <h3>Use the form below, we will answer you asap.</h2>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            <label for="{{ form.email.id_for_label }}">E-mail address for us to answer</label>
+            {{ form.email }}
+        </div>
+        <div class="fieldWrapper">
+            <label for="{{ form.subject.id_for_label }}">Subject</label>
+            {{ form.subject }}
+        </div>
+        <div class="fieldWrapper" id="message">
+            <label for="{{ form.note.id_for_label }}">The desired message</label>
+            {{ form.note }}
+        </div>
+        <button id="submit" type="submit">Send us a message</button>
+        <p><a href="{% url 'home_page' %}">Go back to home page</a></p>
+    </form>
+</div>
+
+</body>
+</html>

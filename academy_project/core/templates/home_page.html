@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+    HomePage
+{% endblock %}
+
+
+{% block content %}
+<div class="inviter">
+    <h1>Manage your entire team<br>in one place</h1>
+    <p><span class="nameOfCompany">Manag</span> allows you to organize your team projects and get them ready quickly and easily. You will see your team's tasks and progress all in one place.</p>
+    <p>It was developed by Tran Anh Linh as a project under STEP IT Academy.</p>
+</div>
+
+<a id="home-page-signup-button" href="{% url 'signup' %}">
+    <button>Start now for free</button>
+</a>
+{% endblock %}

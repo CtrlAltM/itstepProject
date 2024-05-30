@@ -1,0 +1,384 @@
+body {
+    font-family: verdana;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer {
+    margin-top: auto;
+    padding-top: 0.7cm;
+    padding-bottom: 0.7cm;
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+    color: rgb(108, 108, 108);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+.navbar {
+    float: left;
+  }
+  
+.navbar-link {
+    display: block;
+    color: rgb(108, 108, 108);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+.navbar-link:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+#home-page-signup-button {
+    display: block;
+    text-align: center;
+    padding: 40px;
+    font-family: verdana;
+
+}
+
+.inviter {
+    text-align: center;
+    padding-top: 2em;
+}
+
+#home-page-signup-button button {
+    background-color: #2d6be3;
+    color: white;
+    font-size: 1.5em;
+    padding: 15px 35px 15px 35px;
+    border-radius: 40px;
+    border: none;
+}
+
+.SignUpPage {
+    text-align: center;
+    padding-top: 2cm;
+    padding-bottom: 1cm;
+}
+
+.LogInPage {
+    text-align: center;
+    padding-bottom: 1cm;
+}
+
+.nameOfCompany {
+    color: #2d6be3;
+    font-weight: bold;
+}
+
+.login-form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3cm;
+    width: 25%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 10px 10px 10px #015cac;
+    background-color: white;
+}
+
+.fieldWrapper {
+    padding: 15px;
+    margin: auto;
+}
+
+.fieldWrapper label {
+    font-size: 1em;
+}
+
+
+.fieldWrapper input {
+    border-radius: 10px;
+    border: #c3c3c3 solid 0.1px;
+    width: 90%;
+    height: 1cm;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fieldWrapper input:focus {
+    outline: none !important;
+    border: #747474 solid 0.2px;
+}
+
+.login-form button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-family: verdana;
+    background-color: #2d6be3;
+    color: white;
+    font-size: 1em;
+    width: 40%;
+    height: 1cm;
+    border-radius: 20px;
+    border: none;
+}
+
+.login-form p {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.LogInPage h2 {
+    font-size: 2.5em;
+}
+
+.LogInPage h3 {
+    font-size: 1em;
+    font-weight: light;
+    color:rgb(108, 108, 108)
+}
+
+.signup-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 10px 10px 10px #b1cfe9;
+    background-color: white;
+}
+
+.signup-form button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-family: verdana;
+    background-color: #2d6be3;
+    color: white;
+    font-size: 1em;
+    width: 40%;
+    height: 1cm;
+    border-radius: 20px;
+    border: none;
+}
+
+.signup-form p {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/*_____________PROFILE______________*/
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+.blue {
+    color: #2d6be3;
+}
+
+.ProfilePage {
+    text-align: center;
+    padding-top: 1.5cm;
+    padding-bottom: 1cm;
+}
+
+.profile-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+}
+
+.profile-form button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-family: verdana;
+    background-color: #2d6be3;
+    color: white;
+    font-size: 1em;
+    width: 40%;
+    height: 1cm;
+    border-radius: 20px;
+    border: none;
+}
+
+
+/*_____________TEAM______________*/
+
+.team h1 {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px 10px;
+    padding: 40px;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.teamMembers {
+    background-color: #2d6be3;
+    border-color: none;
+    border-radius: 15px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding: 5px;
+    margin-right: 50px;
+}
+
+.tasksTable {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.HeaderTeamMembers {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.HeaderTasks {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.TaskName {
+    grid-column: 2 / 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.TaskDue {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.TaskAssigned {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.tableCell {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+
+.AddButton {
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #d8e5ff;
+}
+
+.member {
+    color: white;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left
+}
+
+.profilePic {
+    width: 50px;
+    height: 50px;
+    padding-right: 15px;
+}
+
+#submit {
+    border: none;
+    color: white;
+    font-size: 30px;
+    background: none;
+    width: 30px;
+}
+
+.addForm {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left
+}
+
+.addForm input {
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+#submitTask {
+    border: none;
+    color: rgb(72, 72, 72);
+    font-size: 30px;
+    background: none;
+    width: 30px;
+}
+
+.addTaskForm {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left
+}
+
+.addTaskForm input {
+    width: 100px;
+    border: 1px solid #2d6be3;
+    background-color: #2d6be3;
+    color: white;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.addTaskForm input::placeholder {
+    color: rgb(172, 201, 255);
+}
+
+.description {
+    padding: 30px;
+    border: 1px solid #2d6be3;
+    border-radius: 4px;
+}

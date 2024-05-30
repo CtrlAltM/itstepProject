@@ -1,0 +1,31 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+
+{% block content %}
+<div class="ProfilePage">
+    <h1>Hello, <span class="blue">{{user.username}}</span>. Welcome back to <br> your management place.</h2>
+    <h2>You can edit your profile below:</h2>
+    <div class="profile-form">
+        <form method="post">
+            {% csrf_token %}
+            {{ user_form.non_field_errors }}
+            <div class="fieldWrapper">
+                <label for='{{form.username}}'> Username: </label><br>
+                {{user_form.username}}
+            </div>
+            <div class="fieldWrapper">
+                <label for='{{form.email}}'> E-mail: </label><br>
+                {{user_form.email}}
+                {{user_form.email.errors}}
+            </div>
+    
+            <button type="submit">Save changes</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

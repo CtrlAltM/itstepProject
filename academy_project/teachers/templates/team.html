@@ -1,0 +1,81 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Team management
+{% endblock %}
+
+
+
+{% block content %}
+<div class="team">
+    <h1>Your team</h1>
+
+    <div class="grid-container">
+        <div class="HeaderTeamMembers">
+            Team members
+        </div>
+        <div class="teamMembers">
+            {% for member in members %}
+            <div class="member">
+                <div> <span><img src="https://lh6.googleusercontent.com/proxy/ZLGihPRfkkerdJBqfRKKFRWQcXDCfMMuuK_6_IDH6Mfhu0VI3Du2L9eOTiz0yKsIftOesQQnj0whQCZFudjFH-cXgBKnebrpknuWtjKkDcRC5Ik" class="profilePic"></span></div>
+                <div>{{ member.first_name }} {{ member.last_name }} </div>
+            </div>
+            {% endfor %}
+
+            <div class="addForm">
+                <form method="post">
+                    {% csrf_token %}
+                    <span><button id="submit" type="submit" name="addmember">+</button></span>
+                    <span>
+                            {{ form.first_name }}
+                    </span>
+                    <span>
+                            {{ form.last_name }}
+                    </span>
+                </form>
+            </div>
+        </div>
+
+        <div class="HeaderTasks">
+            Tasks of your team
+            <div class="addTaskForm">
+                <form method="post">
+                    {% csrf_token %}
+                    <span><button id="submitTask" type="submit" name="addtask">+</button></span>
+                    <span>
+                        {{ form.name }}
+                    </span>
+                    <span>
+                        {{ form.description }}
+                    </span>
+                    <span>
+                        {{ form.assigned }}
+                    </span>
+                    <span>
+                        {{ form.due }}
+                    </span>
+                </form>
+            </div>
+        </div>
+
+        
+            <div class="TaskName">
+                Task Name
+                {% for task in tasks %}
+                    <div class="tableCell"><a href="{% url 'details' task.id %}">{{ task.name }}</a></div>
+                {% endfor %}
+            </div>
+
+            <div class="TaskDue">
+                Due to
+                {% for task in tasks %}
+                    <div class="tableCell">{{ task.due }}</div>
+                {% endfor %}
+            </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+
+<header>
+    <nav>
+        <ul id="nav">
+            <li class="navbar">
+                <h4><a class="navbar-link" href="{% url 'home_page' %}">Home</a></h4>
+            </li>
+            <li class="navbar">
+                <h4><a class="navbar-link" href="{% url 'team' %}">Your Team</a></h4>
+            </li>
+            <li class="navbar">
+                <h4><a class="navbar-link" href="{% url 'profile' %}">Profile</a></h4>
+            </li>
+            <li class="navbar">
+                <h4><a class="navbar-link" href="{% url 'contact_form' %}">Contact</a></h4>
+            </li>
+             {% if user.is_authenticated %}
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Log out</button>
+            </form>
+            {% else %}
+            <li class="navbar">
+                <a class="navbar-link" href="{% url 'login' %}">Log in</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'stylesheet_core.css' %}">
+</head>
+<body style="background-color: #c2e3ff;">
+<!-- signup.html -->
+<div class="SignUpPage">
+    <h1>Start managing like a pro. Use <span class="nameOfCompany">Manag.</span></h1>
+</div>
+
+<div class="signup-form">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        
+        <div class="fieldWrapper">
+		    <label for='{{form.username}}'> Username: </label><br>
+		    {{form.username}}
+	    </div>
+        <div class="fieldWrapper">
+		    <label for='{{form.email}}'> E-mail: </label><br>
+		    {{form.email}}
+            {{form.email.errors}}
+	    </div>
+        <div class="fieldWrapper">
+		    <label for='{{form.password1}}'> Password: </label><br>
+		    {{form.password1}}
+            {{form.password1.errors}}
+	    </div>
+        <div class="fieldWrapper">
+		    <label for='{{form.password2}}'> Password Confirmation: </label><br>
+		    {{form.password2}}
+            {{form.password2.errors}}
+            
+	    </div>
+
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="{% url 'login' %}">Log in here</a></p>
+        <p><a href="{% url 'home_page' %}">Go back to home page</a></p>
+    </form>
+</div>
+
+</body>
+</html>

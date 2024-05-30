@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+
+    <link rel="stylesheet" href="{% static 'stylesheet_core.css' %}">
+</head>
+<body style="background-color: #0067c1;">
+<!-- registration/login.html -->
+
+<div class="login-form">
+    <div class="LogInPage">
+        <h2>Welcome back</h1>
+        <h3>Please log in to get full access</h2>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.username.errors }}
+            <label for="{{ form.username.id_for_label }}">Username</label>
+            {{ form.username }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.password.errors }}
+            <label for="{{ form.password.id_for_label }}">Your password</label>
+            {{ form.password }}
+        </div>
+        <button type="submit">Login</button>
+        <p>Don't have an account yet? <a href="{% url 'signup' %}">Create one here</a></p>
+        <p><a href="{% url 'home_page' %}">Go back to home page</a></p>
+    </form>
+</div>
+
+</body>
+</html>
